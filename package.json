@@ -1,0 +1,48 @@
+{
+  "name": "react-component-factory",
+  "version": "0.0.1",
+  "description": "a template environment to build react component ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.5.3",
+    "babel-core": "^6.18.2",
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.23.1",
+    "express": "^4.14.0",
+    "file-loader": "^0.8.5",
+    "html-webpack-plugin": "^2.24.1",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-transform-hmr": "^1.0.4",
+    "react-transform": "^0.0.3",
+    "react-transform-catch-errors": "^1.0.2",
+    "redbox-react": "^1.3.3",
+    "react-tools": "^0.10.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-notifier": "^1.4.1",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "NODE_ENV=test mocha './src/**/__tests__/*.js' --require ./test/setup.js --compilers js:babel-core/register --recursive",
+    "test:watch": "npm test --watch",
+    "lint": "eslint --ignore-pattern 'src/**/__tests__' src;true",
+    "build": "NODE_ENV=production webpack -p --progress  --config ./webpack.production.config.js",
+    "dev": "NODE_ENV=development node devServer.js"
+  },
+  "author": "jysun",
+  "license": "MIT"
+}
